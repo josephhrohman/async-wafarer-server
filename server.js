@@ -43,9 +43,10 @@ app.get('/', (req, res) => res.send('<h1>Welcome to Wayfarer API</h1>'));
 app.use('/api/v1/auth', ctrl.auth);
 // Users Routes
 app.use('/api/v1/users', ctrl.users);
-// Post Routes
+// Posts Routes
 app.use('/api/v1/posts', ctrl.posts);
-
+// Cities Routes
+app.use('/api/v1/cities', ctrl.cities);
 
 // ----------------------------- START SERVER ----------------------------- //
 
