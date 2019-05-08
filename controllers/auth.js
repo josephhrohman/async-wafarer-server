@@ -39,7 +39,7 @@ router.post('/register', async (req, res) => {
 
   } catch (err) {
     console.log(err);
-    res.status(500).json({status: 500, error: err});
+    return res.status(500).json({status: 500, error: err});
   }
 
 });
@@ -70,7 +70,7 @@ router.post('/login', async (req, res) => {
   } catch(err) {
     console.log(err);
     
-    res.status(500).json({status: 500, error: 'Something went wrong. Please try again'});
+    return res.status(500).json({status: 500, error: 'Something went wrong. Please try again'});
   }
 
 });
