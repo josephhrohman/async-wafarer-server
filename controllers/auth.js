@@ -76,5 +76,16 @@ router.post('/login', async (req, res) => {
 });
 
 
+// POST Logout Route
+router.post('/logout', (req, res) => {
+  // Delete the user session
+  req.session.destroy(err => {
+    if (err) return res.status(500).json({status: 500, errors: 'Something went wrong. Please try again'});
+    // Remove the cookie from the response object header
+    res.clearCookie('connect.sid').json({status: 200, message: 'Logout successful'});
+  });
+});
+
+
 
 module.exports = router;
