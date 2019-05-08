@@ -587,4 +587,3 @@ const seedDatabase = async () => {
   }
 }
 seedDatabase();
-console.log(3)
